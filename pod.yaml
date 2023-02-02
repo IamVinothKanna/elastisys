@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostname-app
+  labels:
+    company: elastisys
+spec:
+  containers:
+    - name: node-hostname
+      image: 743915183438.dkr.ecr.ap-south-1.amazonaws.com/elastisys

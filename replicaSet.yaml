@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: hostname-app-replicaset
+  labels:
+    company: elastisys
+spec:
+  selector:
+    matchLabels:
+      company: elastisys
+  replicas: 3
+  template:
+  metadata:
+    name: hostname-app
+    labels:
+      company: elastisys
+  spec:
+    containers:
+      - name: node-hostname
+        image: 743915183438.dkr.ecr.ap-south-1.amazonaws.com/elastisys
+  
